@@ -1,0 +1,30 @@
+# Fluxbox Klavye Kısayolları — Tam Güç Konfigürasyon
+
+# ── Temel pencere yönetimi ──────────────────────────────────
+Alt F4                :Close
+Alt F5                :Maximize
+Alt F9                :Minimize
+Alt F10               :Fullscreen
+Alt Tab               :NextWindow {groups} (workspace=[current])
+Alt Shift Tab         :PrevWindow {groups} (workspace=[current])
+Ctrl Alt Right        :NextWorkspace
+Ctrl Alt Left         :PrevWorkspace
+
+# ── Uygulamalar ─────────────────────────────────────────────
+Ctrl Alt T  :Exec xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title Terminal
+Ctrl Alt U  :Exec urxvt -bg '#05060c' -fg '#e8eaf0' -fn 'xft:Monospace:size=12'
+Ctrl Alt B  :Exec chromium-browser --no-sandbox --disable-dev-shm-usage
+Ctrl Alt F  :Exec pcmanfm
+Ctrl Alt E  :Exec geany
+Ctrl Alt H  :Exec xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e htop
+Ctrl Alt P  :Exec xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title 'Python 3' -e python3
+Ctrl Alt N  :Exec xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title 'Node.js' -e node
+
+# ── Ekran görüntüsü ─────────────────────────────────────────
+Print       :Exec scrot ~/Desktop/screenshot-$(date +%s).png
+
+# ── Fluxbox ─────────────────────────────────────────────────
+Ctrl F1     :Workspace 1
+Ctrl F2     :Workspace 2
+Ctrl F3     :Workspace 3
+Super_L     :RootMenu
