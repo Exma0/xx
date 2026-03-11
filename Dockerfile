@@ -147,10 +147,9 @@ RUN npm install -g --silent \
     && npm cache clean --force \
     && rm -rf /root/.npm/_cacache
 
-# ── ADIM 6: TigerVNC şifresiz kurulum ───────────────────────
-RUN mkdir -p /root/.vnc \
-    && printf "" | vncpasswd -f > /root/.vnc/passwd \
-    && chmod 600 /root/.vnc/passwd
+# ── ADIM 6: TigerVNC dizini ─────────────────────────────────
+# SecurityTypes=None kullandığımız için passwd dosyasına gerek yok
+RUN mkdir -p /root/.vnc
 
 # ── ADIM 7: Dizinler ─────────────────────────────────────────
 RUN mkdir -p \
