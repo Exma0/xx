@@ -1,0 +1,16 @@
+[app] (xterm)
+  [Dimensions]  {900 550}
+  [Position]    (UPPERLEFT) {60 60}
+[end]
+[app] (chromium-browser)
+  [Dimensions]  {1100 700}
+  [Position]    (CENTER) {0 0}
+[end]
+[app] (geany)
+  [Dimensions]  {950 650}
+  [Position]    (CENTER) {0 0}
+[end]
+[app] (pcmanfm)
+  [Dimensions]  {800 500}
+  [Position]    (CENTER) {0 0}
+[end]

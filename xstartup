@@ -1,0 +1,26 @@
+#!/bin/bash
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+
+export HOME=/root
+export DISPLAY=${DISPLAY:-:1}
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Koyu arka plan
+xsetroot -solid "#05060c"
+
+# D-Bus
+eval $(dbus-launch --sh-syntax 2>/dev/null) || true
+
+# Fluxbox başlat
+exec fluxbox &
+
+# Terminal (2.5 saniye bekle)
+sleep 2.5 && xterm \
+    -bg '#05060c' -fg '#e8eaf0' \
+    -fa 'Monospace' -fs 12 \
+    -geometry '115x34+60+60' \
+    -title 'Terminal' \
+    -e bash --rcfile /root/welcome.sh &
+
+wait

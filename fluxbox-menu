@@ -1,0 +1,41 @@
+[begin] (Linux Masaüstü)
+  [exec] (🖥️  Terminal)       {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title Terminal}
+  [exec] (📺  URxvt Terminal) {urxvt -bg '#05060c' -fg '#e8eaf0' -fn 'xft:Monospace:size=12'}
+  [exec] (🌐  Chromium)       {chromium-browser --no-sandbox --disable-dev-shm-usage}
+  [exec] (📁  Dosya Gezgini)  {pcmanfm}
+  [exec] (📝  Geany IDE)      {geany}
+  [separator]
+  [submenu] (🐍 Python)
+    [exec] (Python 3 REPL)    {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title 'Python 3' -e python3}
+    [exec] (pip install ...)  {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title pip -e bash -c 'printf "pip install >>> "; read P; pip3 install $P; echo "Tamam!"; read'}
+    [exec] (pip list)         {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e bash -c 'pip3 list 2>&1 | less'}
+    [exec] (Python Sysinfo)   {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e bash -c 'python3 -c "import sys,platform; print(sys.version); print(platform.uname())"; read'}
+  [end]
+  [submenu] (🟢 Node.js)
+    [exec] (Node REPL)        {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title 'Node.js' -e node}
+    [exec] (npm install ...)  {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title npm -e bash -c 'printf "npm install >>> "; read P; npm install $P; echo "Tamam!"; read'}
+    [exec] (http-server :8080){xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title 'HTTP Server' -e bash -c 'cd ~ && http-server -p 8080'}
+    [exec] (pm2 status)       {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e bash -c 'pm2 list; read'}
+  [end]
+  [submenu] (📦 Paket Yönetimi)
+    [exec] (apt install ...)  {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title apt -e bash -c 'printf "apt install >>> "; read P; apt-get install -y $P; echo "Tamam!"; read'}
+    [exec] (apt update)       {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e bash -c 'apt-get update; read'}
+    [exec] (apt upgrade)      {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e bash -c 'apt-get upgrade -y; read'}
+    [exec] (apt search ...)   {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e bash -c 'printf "apt search >>> "; read P; apt-cache search $P | less'}
+  [end]
+  [separator]
+  [submenu] (🔧 Sistem)
+    [exec] (htop)             {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title htop -e htop}
+    [exec] (iotop)            {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -title iotop -e iotop}
+    [exec] (df -h)            {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e bash -c 'df -h; read'}
+    [exec] (free -h)          {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e bash -c 'free -h; read'}
+    [exec] (Sistem Bilgisi)   {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e bash /root/Scripts/sysinfo.sh}
+    [exec] (Optimizasyon)     {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e bash /root/Scripts/optimize.sh}
+    [exec] (Ekran Görüntüsü)  {scrot ~/Desktop/screenshot-$(date +%s).png}
+    [exec] (tmux)             {xterm -bg '#05060c' -fg '#e8eaf0' -fa 'Monospace' -fs 12 -e tmux}
+  [end]
+  [separator]
+  [config] (⚙️ Ayarlar)
+  [reconfig] (🔄 Yenile)
+  [restart] (↩️ Yeniden Başlat)
+[end]
