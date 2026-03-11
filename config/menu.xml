@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="root-menu" label="WebOS Linux">
+  <item label="🖥️  Terminal">
+    <action name="Execute">
+      <command>xterm -bg '#0e1117' -fg '#e2e8f0' -fa 'Monospace' -fs 12 -geometry 100x30 -title Terminal</command>
+    </action>
+  </item>
+  <item label="📁  Dosya Gezgini (Thunar)">
+    <action name="Execute"><command>thunar</command></action>
+  </item>
+  <item label="📝  Metin Editörü (Mousepad)">
+    <action name="Execute"><command>mousepad</command></action>
+  </item>
+  <item label="🌐  Firefox">
+    <action name="Execute"><command>firefox</command></action>
+  </item>
+  <separator/>
+  <menu id="dev-menu" label="⚙️  Geliştirici Araçları">
+    <item label="Python 3">
+      <action name="Execute">
+        <command>xterm -bg '#0e1117' -fg '#e2e8f0' -fa 'Monospace' -fs 12 -e python3</command>
+      </action>
+    </item>
+    <item label="Node.js REPL">
+      <action name="Execute">
+        <command>xterm -bg '#0e1117' -fg '#e2e8f0' -fa 'Monospace' -fs 12 -e node</command>
+      </action>
+    </item>
+    <item label="htop (Sistem Monitörü)">
+      <action name="Execute">
+        <command>xterm -bg '#0e1117' -fg '#e2e8f0' -fa 'Monospace' -fs 12 -e htop</command>
+      </action>
+    </item>
+    <item label="Vim Editörü">
+      <action name="Execute">
+        <command>xterm -bg '#0e1117' -fg '#e2e8f0' -fa 'Monospace' -fs 12 -e vim</command>
+      </action>
+    </item>
+  </menu>
+  <separator/>
+  <item label="🔄  Openbox Yenile">
+    <action name="Reconfigure"/>
+  </item>
+</menu>
+
+</openbox_menu>
