@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_config xmlns="http://openbox.org/3.4/rc">
+
+  <resistance><strength>10</strength><screen_edge_strength>20</screen_edge_strength></resistance>
+  <focus>
+    <focusNew>yes</focusNew>
+    <followMouse>no</followMouse>
+    <focusLast>yes</focusLast>
+    <underMouse>no</underMouse>
+    <focusDelay>200</focusDelay>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
+
+  <theme>
+    <name>Bear2</name>
+    <titleLayout>NLIMC</titleLayout>
+    <keepBorder>yes</keepBorder>
+    <animateIconify>yes</animateIconify>
+    <font place="ActiveWindow">
+      <name>Liberation Sans</name><size>10</size><weight>Bold</weight><slant>Normal</slant>
+    </font>
+    <font place="InactiveWindow">
+      <name>Liberation Sans</name><size>10</size><weight>Normal</weight><slant>Normal</slant>
+    </font>
+  </theme>
+
+  <desktops>
+    <number>2</number>
+    <firstdesk>1</firstdesk>
+    <names><name>Ana</name><name>İş</name></names>
+    <popupTime>875</popupTime>
+  </desktops>
+
+  <resize><drawContents>yes</drawContents><popupShow>NonPixel</popupShow></resize>
+
+  <keyboard>
+    <keybind key="C-A-t"><action name="Execute"><command>xterm -bg '#0e1117' -fg '#e2e8f0' -fa Monospace -fs 12 -title Terminal</command></action></keybind>
+    <keybind key="C-A-f"><action name="Execute"><command>thunar</command></action></keybind>
+    <keybind key="C-A-e"><action name="Execute"><command>mousepad</command></action></keybind>
+    <keybind key="C-A-b"><action name="Execute"><command>firefox</command></action></keybind>
+    <keybind key="A-F4"><action name="Close"/></keybind>
+    <keybind key="A-Tab"><action name="NextWindow"><dialog>icons</dialog></action></keybind>
+    <keybind key="Super_L"><action name="ShowMenu"><menu>root-menu</menu></action></keybind>
+  </keyboard>
+
+  <mouse>
+    <dragThreshold>8</dragThreshold>
+    <doubleClickTime>500</doubleClickTime>
+    <screenEdgeWarpTime>400</screenEdgeWarpTime>
+    <context name="Desktop">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu"><menu>root-menu</menu></action>
+      </mousebind>
+    </context>
+    <context name="Titlebar">
+      <mousebind button="Left" action="Drag"><action name="Move"/></mousebind>
+      <mousebind button="Left" action="DoubleClick"><action name="ToggleMaximize"/></mousebind>
+    </context>
+    <context name="Handle">
+      <mousebind button="Left" action="Drag"><action name="Resize"/></mousebind>
+    </context>
+    <context name="BLCorner"><mousebind button="Left" action="Drag"><action name="Resize"><edge>bottom_left</edge></action></mousebind></context>
+    <context name="BRCorner"><mousebind button="Left" action="Drag"><action name="Resize"><edge>bottom_right</edge></action></mousebind></context>
+    <context name="TLCorner"><mousebind button="Left" action="Drag"><action name="Resize"><edge>top_left</edge></action></mousebind></context>
+    <context name="TRCorner"><mousebind button="Left" action="Drag"><action name="Resize"><edge>top_right</edge></action></mousebind></context>
+  </mouse>
+
+  <applications>
+    <application class="*">
+      <decorate>yes</decorate>
+    </application>
+  </applications>
+
+</openbox_config>
