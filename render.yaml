@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: linux-desktop
+    runtime: docker
+    privileged: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: "5000"
+      - key: RESOLUTION
+        value: "1280x720"
+    healthCheckPath: /
+    numInstances: 1
