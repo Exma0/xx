@@ -4,11 +4,12 @@
 # Arka plan rengi
 xsetroot -solid "#0e1117" &
 
-# İlk terminal
-sleep 1 && xterm \
+# Terminal aç (1 saniye bekle)
+sleep 1
+xterm \
   -bg '#0e1117' \
   -fg '#e2e8f0' \
   -fa 'Monospace' \
   -fs 12 \
   -geometry 100x30+50+50 \
-  -title 'Terminal — WebOS Linux' &
+  -title 'Terminal — Linux Masaüstü' &
