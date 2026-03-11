@@ -1,0 +1,3 @@
+#!/bin/bash
+# Fluxbox startup — masaüstü hazır olduğunda çalışır
+xsetroot -solid "#05060c"
